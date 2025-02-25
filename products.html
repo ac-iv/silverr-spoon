@@ -49,6 +49,34 @@
         .product-item:hover .highlight {
             opacity: 1;
         }
+
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .popup img {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+        }
+
+        .popup .close-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -64,65 +92,75 @@
     </header>
     <h3>Sweaters</h2>
     <div class="product-grid">
-        <a href="product-pages/product5.html" class="product-item">
+        <div class="product-item" onclick="openPopup('img/sweater4.png')">
             <img src="img/sweater4.png" alt="Sweater 1">
             <div class="highlight"></div>
-        </a>
-        <a href="product-pages/product6.html" class="product-item">
+        </div>
+        <div class="product-item" onclick="openPopup('img/sweater-ppl.png')">
             <img src="img/sweater-ppl.png" alt="Sweater 2">
             <div class="highlight"></div>
-        </a>
-        <a href="product-pages/product7.html" class="product-item">
+        </div>
+        <div class="product-item" onclick="openPopup('img/sweater-whitetxt.png')">
             <img src="img/sweater-whitetxt.png" alt="Sweater 3">
             <div class="highlight"></div>
-        </a>
-        <a href="product-pages/product8.html" class="product-item">
+        </div>
+        <div class="product-item" onclick="openPopup('img/sweater3.png')">
             <img src="img/sweater3.png" alt="Sweater 4">
             <div class="highlight"></div>
-        </a>
+        </div>
     </div>
     <h3>Tees</h2>
     <div class="product-grid">
-        <a href="product-pages/product1.html" class="product-item">
+        <div class="product-item" onclick="openPopup('img/shirt2.png')">
             <img src="img/shirt2.png" alt="Shirt 1">
             <div class="highlight"></div>
-        </a>
-       
-        <a href="product-pages/product3.html" class="product-item">
+        </div>
+        <div class="product-item" onclick="openPopup('img/shirt.png')">
             <img src="img/shirt.png" alt="Shirt 2">
             <div class="highlight"></div>
-        </a>
-        <a href="product-pages/product1.html" class="product-item">
+        </div>
+        <div class="product-item" onclick="openPopup('img/white-shirt-inherit.png')">
             <img src="img/white-shirt-inherit.png" alt="Shirt 3">
             <div class="highlight"></div>
-        </a>
-       
-        <a href="product-pages/product3.html" class="product-item">
+        </div>
+        <div class="product-item" onclick="openPopup('img/white-shirt-priv.png')">
             <img src="img/white-shirt-priv.png" alt="Shirt 4">
             <div class="highlight"></div>
-        </a>
+        </div>
     </div>
     <h3>Artifacts</h2>
     <div class="product-grid"> 
-        <a href="product-pages/product4.html" class="product-item-inactive">
+        <div class="product-item product-item-inactive">
             <img src="img/images-8.png" alt="Blank">
-        </a>
-       
-        <a href="product-pages/product4.html" class="product-item">
-            <img src="img/grey-beanie-ss.png" alt="Shirt 4">
+        </div>
+        <div class="product-item" onclick="openPopup('img/grey-beanie-ss.png')">
+            <img src="img/grey-beanie-ss.png" alt="Grey Beanie">
             <div class="highlight"></div>
-        </a>
-        <a href="product-pages/product4.html" class="product-item">
-            <img src="img/black-trucker-priv.png" alt="Shirt 4">
+        </div>
+        <div class="product-item" onclick="openPopup('img/black-trucker-priv.png')">
+            <img src="img/black-trucker-priv.png" alt="Black Trucker Hat">
             <div class="highlight"></div>
-        <a href="product-pages/product4.html" class="product-item-inactive">
+        </div>
+        <div class="product-item product-item-inactive">
             <img src="img/images-8.png" alt="Blank">
-        </a>
+        </div>
+    </div>
+    <div class="popup" id="imagePopup" onclick="if (event.target.id === 'imagePopup') closePopup()">
+        <span class="close-button" onclick="closePopup()">&times;</span>
+        <img src="" id="popupImage" alt="Popup Image">
     </div>
     <footer>
         <p>&copy; 2024 SilverSpoon. All rights reserved.</p>
     </footer>
+    <script>
+        function openPopup(imageSrc) {
+            document.getElementById('popupImage').src = imageSrc;
+            document.getElementById('imagePopup').style.display = 'flex';
+        }
+
+        function closePopup() {
+            document.getElementById('imagePopup').style.display = 'none';
+        }
+    </script>
 </body>
 </html>
-
-
