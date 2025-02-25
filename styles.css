@@ -194,6 +194,17 @@ main{
     opacity: 1;
 }
 
-.product-map svg {
+.product-map-inactive svg {
     display: none;
+}
+.product-map-inactive .highlight {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+    clip-path: url(#imageClip);
 }
