@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - SilverSpoon</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: white;
+        }
+        h2{
+            text-align: left;
+        }
+        .product-grid {
+            margin: 50px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-gap: 20px;
+            max-width: 1200px;
+            padding: 0 20px;
+        }
+
+        .product-item {
+            position: relative;
+            cursor: pointer;
+            overflow: hidden;
+            width: 100%;
+            height: auto;
+        }
+
+        .product-item img {
+            width: 100%;
+            display: block;
+        }
+       
+        .product-item .highlight {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 250, 152, 0.5);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .product-item:hover .highlight {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <img src="img/silverspoonlogo.png" alt="SilverSpoon Logo" class="logo">
+        </a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="products.html">Current Drop</a>
+        </nav>
+    </header>
+    <h3>Sweaters</h2>
+    <div class="product-grid">
+        <a href="product-pages/product5.html" class="product-item">
+            <img src="img/sweater4.png" alt="Shirt 5">
+            <div class="highlight"></div>
+        </a>
+        <a href="product-pages/product6.html" class="product-item">
+            <img src="img/sweater-ppl.png" alt="Shirt 6">
+            <div class="highlight"></div>
+        </a>
+        <a href="product-pages/product7.html" class="product-item">
+            <img src="img/sweater-whitetxt.png" alt="Shirt 7">
+            <div class="highlight"></div>
+        </a>
+        <a href="product-pages/product8.html" class="product-item">
+            <img src="img/sweater3.png" alt="Shirt 8">
+            <div class="highlight"></div>
+        </a>
+    </div>
+    <h3>Tees</h2>
+    <div class="product-grid">
+        <a href="product-pages/product1.html" class="product-item">
+            <img src="img/shirt2.png" alt="Shirt 1">
+            <div class="highlight"></div>
+        </a>
+       
+        <a href="product-pages/product3.html" class="product-item">
+            <img src="img/shirt.png" alt="Shirt 2">
+            <div class="highlight"></div>
+        </a>
+        <a href="product-pages/product1.html" class="product-item">
+            <img src="img/white-shirt-inherit.png" alt="Shirt 3">
+            <div class="highlight"></div>
+        </a>
+       
+        <a href="product-pages/product3.html" class="product-item">
+            <img src="img/white-shirt-priv.png" alt="Shirt 4">
+            <div class="highlight"></div>
+        </a>
+    </div>
+    <h3>Artifacts</h2>
+    <div class="product-grid"> 
+        <a href="product-pages/product4.html" class="product-item">
+            <img src="img/images-8.png" alt="Shirt 4">
+            <div class="highlight"></div>
+        </a>
+       
+        <a href="product-pages/product4.html" class="product-item">
+            <img src="img/grey-beanie-ss.png" alt="Shirt 4">
+            <div class="highlight"></div>
+        </a>
+        <a href="product-pages/product4.html" class="product-item">
+            <img src="img/black-trucker-priv.png" alt="Shirt 4">
+            <div class="highlight"></div>
+        <a href="product-pages/product4.html" class="product-item">
+            <img src="img/images-8.png" alt="Shirt 4">
+            <div class="highlight"></div>
+        </a>
+    </div>
+    <footer>
+        <p>&copy; 2024 SilverSpoon. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
+

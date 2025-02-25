@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width:device-width, initial-scale=1.0">
+    <title>Unity Sweater - SilverSpoon</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        #product-page {
+            margin-top: -80px;
+            padding: 50px;
+            text-align: center;
+            font-family: sans-serif;
+            line-height: 1.6;
+        }
+
+        #product-page img {
+            max-width: 60%;
+            min-width: 300px;
+            margin-bottom: 20px;
+        }
+
+        #product-page h1 {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+        }
+
+        #product-page p {
+            max-width: 800px;
+            margin: 0 auto 30px;
+            text-align: left;
+        }
+
+        #product-page .product-details {
+            max-width: 600px;
+            margin: 20px auto;
+            text-align: left;
+        }
+
+        #product-page .product-details ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        #product-page .product-details button {
+            background-color: #000;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 1em;
+            margin-top: 20px;
+        }
+        h1{
+            font-weight: 100;
+            font-style: italic;
+            
+        }
+        #waitlist-form {
+            max-width: 400px;
+            margin: 40px auto;
+            text-align: center;
+        }
+
+        #waitlist-form input[type="email"] {
+            width: 70%;
+            padding: 05px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+        }
+
+        #waitlist-form button {
+            background-color: #333;
+            color: white;
+            padding: 6px 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        #waitlist-form button:hover {
+            filter: invert(1);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="../index.html">
+            <img src="../img/silverspoonlogo.png" alt="SilverSpoon Logo" class="logo">
+        </a>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../about.html">About</a>
+            <a href="../products.html">Products</a>
+        </nav>
+    </header>
+    <br><br><br>
+    <section id="product-page">
+        <h1>Privileged Hoodie</h1>
+<br>
+       
+        <img src="../img/hoodie.png" alt="Unity Sweater">
+      
+        <div id="waitlist-form">
+
+          
+            <button onclick="addToWaitlist()">Join Waitist</button>
+       </div>
+        
+    </section>
+
+   
+
+    <script>
+        function addToWaitlist() {
+            const email = document.getElementById('waitlist-email').value;
+            if (email) {
+                alert(`You have been added to the waitlist with email: ${email}`);
+                // In a real application, you would send this email to your server
+                document.getElementById('waitlist-email').value = ''; // Clear the input
+            } else {
+                alert('Please enter your email address.');
+            }
+        }
+    </script>
+</body>
+</html>
